@@ -1,0 +1,432 @@
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design nes_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to nes_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/Madd_v_tile[4]_GND_32_o_add_144_OUT_cy<5 : 2> on block nes_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/Madd_v_fine[2]_GND_32_o_add_137_OUT_cy<6 : 3> on block nes_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ppu_inst/Mcount_vesa_line_lut<9 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ppu_inst/_n2760<3 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[0][5]_sec_OAM_q[5]_mux_292_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[1][5]_sec_OAM_q[5]_mux_291_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[2][5]_sec_OAM_q[5]_mux_290_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[3][5]_sec_OAM_q[5]_mux_289_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[4][5]_sec_OAM_q[5]_mux_288_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[5][5]_sec_OAM_q[5]_mux_287_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[6][5]_sec_OAM_q[5]_mux_286_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[7][5]_sec_OAM_q[5]_mux_285_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_shift_high[7][15]_spr_shift_high[7][15]_mux_262_OUT<119 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_shift_low[7][15]_spr_shift_low[7][15]_mux_261_OUT<119 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ppu_inst/spr_attribute_0<47 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/apu_inst/apu_pulse_1_inst/Mmux_sweep_target_period_rs_B<8 : 1> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rp2a03_blk/cpu_inst/n0514<7 : 1> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rp2a03_blk/cpu_inst/P<7 : 0> on block
+   nes_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus rp2a03_blk/cpu_inst/alu/Madd_n0124_lut<4
+   : 1> on block nes_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/Msub_GND_17_o_GND_17_o_sub_23_OUT<5:0>_cy<4 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/BusA[7]_BusB[7]_and_27_OUT<7 : 5> on block nes_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/GND_17_o_GND_17_o_sub_23_OUT<4 : 1> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/Mmux__n0296_rs_cy<6 : 1> on block nes_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/Msub_GND_17_o_GND_17_o_sub_23_OUT<5:0>_lut<4 : 1> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/Mmux__n0296_rs_A<6 : 0> on block nes_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus vga_to_hdmi_inst/encode_R/TMDS<9 : 5> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   vga_to_hdmi_inst/encode_G/TMDS_code[9]_TMDS_data[9]_mux_36_OUT<9 : 5> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   vga_to_hdmi_inst/encode_R/TMDS_code[9]_TMDS_data[9]_mux_36_OUT<9 : 5> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file nes_top.edif ...
+ngc2edif: Total memory usage is 105084 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design prg_16_rom.ngc ...
+WARNING:NetListWriters:298 - No output is written to prg_16_rom.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file prg_16_rom.edif ...
+ngc2edif: Total memory usage is 97148 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design vram.ngc ...
+WARNING:NetListWriters:298 - No output is written to vram.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file vram.edif ...
+ngc2edif: Total memory usage is 97148 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design chr_8_rom.ngc ...
+WARNING:NetListWriters:298 - No output is written to chr_8_rom.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file chr_8_rom.edif ...
+ngc2edif: Total memory usage is 95996 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design multiplier.ngc ...
+WARNING:NetListWriters:298 - No output is written to multiplier.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file multiplier.edif ...
+ngc2edif: Total memory usage is 96572 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design nes_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to nes_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/Madd_v_tile[4]_GND_32_o_add_144_OUT_cy<5 : 2> on block nes_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/Madd_v_fine[2]_GND_32_o_add_137_OUT_cy<6 : 3> on block nes_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ppu_inst/Mcount_vesa_line_lut<9 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ppu_inst/_n2760<3 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[0][5]_sec_OAM_q[5]_mux_292_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[1][5]_sec_OAM_q[5]_mux_291_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[2][5]_sec_OAM_q[5]_mux_290_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[3][5]_sec_OAM_q[5]_mux_289_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[4][5]_sec_OAM_q[5]_mux_288_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[5][5]_sec_OAM_q[5]_mux_287_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[6][5]_sec_OAM_q[5]_mux_286_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[7][5]_sec_OAM_q[5]_mux_285_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_shift_high[7][15]_spr_shift_high[7][15]_mux_262_OUT<119 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_shift_low[7][15]_spr_shift_low[7][15]_mux_261_OUT<119 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ppu_inst/spr_attribute_0<47 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/apu_inst/apu_pulse_1_inst/Mmux_sweep_target_period_rs_B<8 : 1> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rp2a03_blk/cpu_inst/n0514<7 : 1> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rp2a03_blk/cpu_inst/P<7 : 0> on block
+   nes_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus rp2a03_blk/cpu_inst/alu/Madd_n0124_lut<4
+   : 1> on block nes_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/Msub_GND_17_o_GND_17_o_sub_23_OUT<5:0>_cy<4 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/BusA[7]_BusB[7]_and_27_OUT<7 : 5> on block nes_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/GND_17_o_GND_17_o_sub_23_OUT<4 : 1> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/Mmux__n0296_rs_cy<6 : 1> on block nes_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/Msub_GND_17_o_GND_17_o_sub_23_OUT<5:0>_lut<4 : 1> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/Mmux__n0296_rs_A<6 : 0> on block nes_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus vga_to_hdmi_inst/encode_R/TMDS<9 : 5> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   vga_to_hdmi_inst/encode_G/TMDS_code[9]_TMDS_data[9]_mux_36_OUT<9 : 5> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   vga_to_hdmi_inst/encode_R/TMDS_code[9]_TMDS_data[9]_mux_36_OUT<9 : 5> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file nes_top.edif ...
+ngc2edif: Total memory usage is 105340 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design prg_16_rom.ngc ...
+WARNING:NetListWriters:298 - No output is written to prg_16_rom.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file prg_16_rom.edif ...
+ngc2edif: Total memory usage is 97148 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design vram.ngc ...
+WARNING:NetListWriters:298 - No output is written to vram.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file vram.edif ...
+ngc2edif: Total memory usage is 96700 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design chr_8_rom.ngc ...
+WARNING:NetListWriters:298 - No output is written to chr_8_rom.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file chr_8_rom.edif ...
+ngc2edif: Total memory usage is 96956 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design multiplier.ngc ...
+WARNING:NetListWriters:298 - No output is written to multiplier.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file multiplier.edif ...
+ngc2edif: Total memory usage is 96124 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design nes_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to nes_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/Madd_v_tile[4]_GND_32_o_add_144_OUT_cy<5 : 2> on block nes_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/Madd_v_fine[2]_GND_32_o_add_137_OUT_cy<6 : 3> on block nes_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ppu_inst/Mcount_vesa_line_lut<9 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ppu_inst/_n2760<3 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[0][5]_sec_OAM_q[5]_mux_292_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[1][5]_sec_OAM_q[5]_mux_291_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[2][5]_sec_OAM_q[5]_mux_290_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[3][5]_sec_OAM_q[5]_mux_289_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[4][5]_sec_OAM_q[5]_mux_288_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[5][5]_sec_OAM_q[5]_mux_287_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[6][5]_sec_OAM_q[5]_mux_286_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_attribute[7][5]_sec_OAM_q[5]_mux_285_OUT<5 : 0> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_shift_high[7][15]_spr_shift_high[7][15]_mux_262_OUT<119 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ppu_inst/spr_shift_low[7][15]_spr_shift_low[7][15]_mux_261_OUT<119 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ppu_inst/spr_attribute_0<47 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/apu_inst/apu_pulse_1_inst/Mmux_sweep_target_period_rs_B<8 : 1> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rp2a03_blk/cpu_inst/n0514<7 : 1> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus rp2a03_blk/cpu_inst/P<7 : 0> on block
+   nes_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus rp2a03_blk/cpu_inst/alu/Madd_n0124_lut<4
+   : 1> on block nes_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/Msub_GND_17_o_GND_17_o_sub_23_OUT<5:0>_cy<4 : 0> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/BusA[7]_BusB[7]_and_27_OUT<7 : 5> on block nes_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/GND_17_o_GND_17_o_sub_23_OUT<4 : 1> on block nes_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/Mmux__n0296_rs_cy<6 : 1> on block nes_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/Msub_GND_17_o_GND_17_o_sub_23_OUT<5:0>_lut<4 : 1> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   rp2a03_blk/cpu_inst/alu/Mmux__n0296_rs_A<6 : 0> on block nes_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus vga_to_hdmi_inst/encode_R/TMDS<9 : 5> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   vga_to_hdmi_inst/encode_G/TMDS_code[9]_TMDS_data[9]_mux_36_OUT<9 : 5> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   vga_to_hdmi_inst/encode_R/TMDS_code[9]_TMDS_data[9]_mux_36_OUT<9 : 5> on
+   block nes_top is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file nes_top.edif ...
+ngc2edif: Total memory usage is 105276 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design prg_16_rom.ngc ...
+WARNING:NetListWriters:298 - No output is written to prg_16_rom.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file prg_16_rom.edif ...
+ngc2edif: Total memory usage is 97276 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design vram.ngc ...
+WARNING:NetListWriters:298 - No output is written to vram.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file vram.edif ...
+ngc2edif: Total memory usage is 97148 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design chr_8_rom.ngc ...
+WARNING:NetListWriters:298 - No output is written to chr_8_rom.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file chr_8_rom.edif ...
+ngc2edif: Total memory usage is 96444 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design multiplier.ngc ...
+WARNING:NetListWriters:298 - No output is written to multiplier.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file multiplier.edif ...
+ngc2edif: Total memory usage is 96892 kilobytes
+
