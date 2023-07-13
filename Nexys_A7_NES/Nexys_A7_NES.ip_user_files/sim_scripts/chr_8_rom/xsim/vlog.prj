@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../Nexys_A7_NES.gen/sources_1/ip/chr_8_rom/sim/chr_8_rom.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

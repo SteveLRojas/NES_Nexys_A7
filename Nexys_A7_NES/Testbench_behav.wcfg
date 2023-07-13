@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Testbench" />
+            <top_module name="glbl" />
+            <top_module name="t65_pack" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="50,455,100.833 ns"></ZoomStartTime>
+      <ZoomEndTime time="50,465,785.834 ns"></ZoomEndTime>
+      <Cursor1Time time="50,464,315.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="242"></NameColumnWidth>
+      <ValueColumnWidth column_width="137"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="42" />
+   <wvobject type="logic" fp_name="/Testbench/CLK_100MHZ">
+      <obj_property name="ElementShortName">CLK_100MHZ</obj_property>
+      <obj_property name="ObjectShortName">CLK_100MHZ</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/button">
+      <obj_property name="ElementShortName">button[3:0]</obj_property>
+      <obj_property name="ObjectShortName">button[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/led">
+      <obj_property name="ElementShortName">led[3:0]</obj_property>
+      <obj_property name="ObjectShortName">led[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/vga_hsync">
+      <obj_property name="ElementShortName">vga_hsync</obj_property>
+      <obj_property name="ObjectShortName">vga_hsync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/vga_vsync">
+      <obj_property name="ElementShortName">vga_vsync</obj_property>
+      <obj_property name="ObjectShortName">vga_vsync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/jp_clk1">
+      <obj_property name="ElementShortName">jp_clk1</obj_property>
+      <obj_property name="ObjectShortName">jp_clk1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/jp_clk2">
+      <obj_property name="ElementShortName">jp_clk2</obj_property>
+      <obj_property name="ObjectShortName">jp_clk2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/jp_latch">
+      <obj_property name="ElementShortName">jp_latch</obj_property>
+      <obj_property name="ObjectShortName">jp_latch</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/clk_25">
+      <obj_property name="ElementShortName">clk_25</obj_property>
+      <obj_property name="ObjectShortName">clk_25</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/to_cpu">
+      <obj_property name="ElementShortName">to_cpu[7:0]</obj_property>
+      <obj_property name="ObjectShortName">to_cpu[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/rp2a03_nnmi">
+      <obj_property name="ElementShortName">rp2a03_nnmi</obj_property>
+      <obj_property name="ObjectShortName">rp2a03_nnmi</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/from_cpu">
+      <obj_property name="ElementShortName">from_cpu[7:0]</obj_property>
+      <obj_property name="ObjectShortName">from_cpu[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/rp2a03_a">
+      <obj_property name="ElementShortName">rp2a03_a[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rp2a03_a[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/rp2a03_r_nw">
+      <obj_property name="ElementShortName">rp2a03_r_nw</obj_property>
+      <obj_property name="ObjectShortName">rp2a03_r_nw</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/ppu_ri_sel">
+      <obj_property name="ElementShortName">ppu_ri_sel[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ppu_ri_sel[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/ppu_ri_ncs">
+      <obj_property name="ElementShortName">ppu_ri_ncs</obj_property>
+      <obj_property name="ObjectShortName">ppu_ri_ncs</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/ppu_ri_r_nw">
+      <obj_property name="ElementShortName">ppu_ri_r_nw</obj_property>
+      <obj_property name="ObjectShortName">ppu_ri_r_nw</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/ppu_ri_dout">
+      <obj_property name="ElementShortName">ppu_ri_dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ppu_ri_dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/ppu_vram_a">
+      <obj_property name="ElementShortName">ppu_vram_a[13:0]</obj_property>
+      <obj_property name="ObjectShortName">ppu_vram_a[13:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/ppu_vram_wr">
+      <obj_property name="ElementShortName">ppu_vram_wr</obj_property>
+      <obj_property name="ObjectShortName">ppu_vram_wr</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/ppu_vram_din">
+      <obj_property name="ElementShortName">ppu_vram_din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ppu_vram_din[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/ppu_vram_dout">
+      <obj_property name="ElementShortName">ppu_vram_dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ppu_vram_dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/sprdma_active">
+      <obj_property name="ElementShortName">sprdma_active</obj_property>
+      <obj_property name="ObjectShortName">sprdma_active</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/NES_col">
+      <obj_property name="ElementShortName">NES_col[7:0]</obj_property>
+      <obj_property name="ObjectShortName">NES_col[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/NES_row">
+      <obj_property name="ElementShortName">NES_row[7:0]</obj_property>
+      <obj_property name="ObjectShortName">NES_row[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/active_rows">
+      <obj_property name="ElementShortName">active_rows</obj_property>
+      <obj_property name="ObjectShortName">active_rows</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/active_render_area">
+      <obj_property name="ElementShortName">active_render_area</obj_property>
+      <obj_property name="ObjectShortName">active_render_area</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/active_draw_area">
+      <obj_property name="ElementShortName">active_draw_area</obj_property>
+      <obj_property name="ObjectShortName">active_draw_area</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/vert_scaler">
+      <obj_property name="ElementShortName">vert_scaler</obj_property>
+      <obj_property name="ObjectShortName">vert_scaler</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/horiz_advance">
+      <obj_property name="ElementShortName">horiz_advance</obj_property>
+      <obj_property name="ObjectShortName">horiz_advance</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/vblank">
+      <obj_property name="ElementShortName">vblank</obj_property>
+      <obj_property name="ObjectShortName">vblank</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/ri_bg_enable">
+      <obj_property name="ElementShortName">ri_bg_enable</obj_property>
+      <obj_property name="ObjectShortName">ri_bg_enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/ri_spr_enable">
+      <obj_property name="ElementShortName">ri_spr_enable</obj_property>
+      <obj_property name="ObjectShortName">ri_spr_enable</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/nes_inst/cart_blk/chr_a_in">
+      <obj_property name="ElementShortName">chr_a_in[13:0]</obj_property>
+      <obj_property name="ObjectShortName">chr_a_in[13:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Testbench/nes_inst/cart_blk/chr_r_nw_in">
+      <obj_property name="ElementShortName">chr_r_nw_in</obj_property>
+      <obj_property name="ObjectShortName">chr_r_nw_in</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/nes_inst/cart_blk/chr_d_in">
+      <obj_property name="ElementShortName">chr_d_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">chr_d_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/nes_inst/cart_blk/chr_d_out">
+      <obj_property name="ElementShortName">chr_d_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">chr_d_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/nes_inst/ppu_inst/spr_palette_index">
+      <obj_property name="ElementShortName">spr_palette_index[3:0]</obj_property>
+      <obj_property name="ObjectShortName">spr_palette_index[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/nes_inst/ppu_inst/spr_shift_low">
+      <obj_property name="ElementShortName">spr_shift_low[7:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">spr_shift_low[7:0][15:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/nes_inst/ppu_inst/spr_shift_high">
+      <obj_property name="ElementShortName">spr_shift_high[7:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">spr_shift_high[7:0][15:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Testbench/nes_inst/ppu_inst/state">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+</wave_config>

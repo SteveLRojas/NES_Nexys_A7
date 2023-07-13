@@ -1,0 +1,2 @@
+multiplier.vhd,vhdl,xil_defaultlib,../../../../Nexys_A7_NES.gen/sources_1/ip/multiplier/sim/multiplier.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

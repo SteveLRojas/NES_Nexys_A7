@@ -1,0 +1,569 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Jul 11 22:12:15 2023
+# Process ID: 653476
+# Current directory: /home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1
+# Command line: vivado -log nes_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source nes_top.tcl
+# Log file: /home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/nes_top.vds
+# Journal file: /home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/vivado.jou
+# Running On: dragomir-System-Product-Name, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 16, Host memory: 16659 MB
+#-----------------------------------------------------------
+source nes_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.srcs/utils_1/imports/synth_1/nes_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.srcs/utils_1/imports/synth_1/nes_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top nes_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 653500
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2652.762 ; gain = 0.000 ; free physical = 160 ; free virtual = 6245
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'nes_top' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/nes_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pll' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/.Xil/Vivado-653476-dragomir-System-Product-Name/realtime/pll_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'pll' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/.Xil/Vivado-653476-dragomir-System-Product-Name/realtime/pll_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'button_debounce' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/button_debounce.v:1]
+	Parameter INVERT_BUTTONS bound to: 1'b0 
+	Parameter NUM_BUTTONS bound to: 4 - type: integer 
+	Parameter CLK_DIV_BITS bound to: 15 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'button_debounce' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/button_debounce.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rp2a03' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/rp2a03.v:29]
+INFO: [Synth 8-638] synthesizing module 'T65' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/t65/T65.vhd:163]
+INFO: [Synth 8-638] synthesizing module 'T65_MCode' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/t65/T65_MCode.vhd:92]
+INFO: [Synth 8-226] default block is never used [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/t65/T65_MCode.vhd:219]
+INFO: [Synth 8-256] done synthesizing module 'T65_MCode' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/t65/T65_MCode.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'T65_ALU' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/t65/T65_ALU.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'T65_ALU' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/t65/T65_ALU.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'T65' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/t65/T65.vhd:163]
+INFO: [Synth 8-6157] synthesizing module 'apu_gen2' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'apu_frame_counter_gen2' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_frame_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'apu_frame_counter_gen2' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_frame_counter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'apu_pulse_1' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_pulse.v:1]
+INFO: [Synth 8-6157] synthesizing module 'apu_envelope_generator_gen2' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_envelope_generator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'apu_envelope_generator_gen2' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_envelope_generator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'apu_length_counter_gen2' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_length_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'apu_length_counter_gen2' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_length_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'apu_pulse_1' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_pulse.v:1]
+INFO: [Synth 8-6157] synthesizing module 'apu_pulse_2' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_pulse.v:160]
+INFO: [Synth 8-6155] done synthesizing module 'apu_pulse_2' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_pulse.v:160]
+INFO: [Synth 8-6157] synthesizing module 'apu_triangle_gen2' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_triangle.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'apu_triangle_gen2' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_triangle.v:1]
+INFO: [Synth 8-6157] synthesizing module 'apu_noise_gen2' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_noise.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'apu_noise_gen2' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_noise.v:1]
+INFO: [Synth 8-6157] synthesizing module 'apu_dmc' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_dmc.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'apu_dmc' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_dmc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'apu_mixer_gen2' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_mixer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'multiplier' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/.Xil/Vivado-653476-dragomir-System-Product-Name/realtime/multiplier_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/.Xil/Vivado-653476-dragomir-System-Product-Name/realtime/multiplier_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'apu_mixer_gen2' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_mixer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'apu_gen2' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'joypad' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/joypad.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'joypad' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/joypad.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rp2a03_dma' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/rp2a03_dma.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'rp2a03_dma' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/rp2a03_dma.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'rp2a03' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/rp2a03.v:29]
+INFO: [Synth 8-6157] synthesizing module 'PPU_gen2' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/PPU_gen2.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'PPU_gen2' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/PPU_gen2.v:30]
+INFO: [Synth 8-6157] synthesizing module 'cart' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cart/cart.v:1]
+INFO: [Synth 8-6157] synthesizing module 'prg_16_rom' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/.Xil/Vivado-653476-dragomir-System-Product-Name/realtime/prg_16_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'prg_16_rom' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/.Xil/Vivado-653476-dragomir-System-Product-Name/realtime/prg_16_rom_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'chr_8_rom' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/.Xil/Vivado-653476-dragomir-System-Product-Name/realtime/chr_8_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'chr_8_rom' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/.Xil/Vivado-653476-dragomir-System-Product-Name/realtime/chr_8_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cart' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cart/cart.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vram' [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/.Xil/Vivado-653476-dragomir-System-Product-Name/realtime/vram_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'vram' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/.Xil/Vivado-653476-dragomir-System-Product-Name/realtime/vram_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'nes_top' (0#1) [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/nes_top.v:1]
+WARNING: [Synth 8-3936] Found unconnected internal register 'combined_sample_reg' and it is trimmed from '9' to '8' bits. [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_mixer.v:61]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pulse_triangle_noise_reg' and it is trimmed from '8' to '7' bits. [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_mixer.v:60]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pulse_triangle_reg' and it is trimmed from '8' to '7' bits. [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/cpu/apu/apu_mixer.v:59]
+WARNING: [Synth 8-3917] design nes_top has port aud_sd driven by constant 0
+WARNING: [Synth 8-7129] Port prg_a_in[14] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prg_r_nw_in in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prg_d_in[7] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prg_d_in[6] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prg_d_in[5] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prg_d_in[4] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prg_d_in[3] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prg_d_in[2] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prg_d_in[1] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prg_d_in[0] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chr_r_nw_in in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chr_d_in[7] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chr_d_in[6] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chr_d_in[5] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chr_d_in[4] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chr_d_in[3] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chr_d_in[2] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chr_d_in[1] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port chr_d_in[0] in module cart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mode[1] in module T65_ALU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mode[0] in module T65_ALU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P[5] in module T65_MCode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P[4] in module T65_MCode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P[3] in module T65_MCode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P[2] in module T65_MCode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Abort_n in module T65 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2652.762 ; gain = 0.000 ; free physical = 1253 ; free virtual = 7301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2652.762 ; gain = 0.000 ; free physical = 1251 ; free virtual = 7300
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2652.762 ; gain = 0.000 ; free physical = 1251 ; free virtual = 7300
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2652.762 ; gain = 0.000 ; free physical = 1247 ; free virtual = 7295
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/chr_8_rom/chr_8_rom/chr_8_rom_in_context.xdc] for cell 'cart_blk/CHR_inst'
+Finished Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/chr_8_rom/chr_8_rom/chr_8_rom_in_context.xdc] for cell 'cart_blk/CHR_inst'
+Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/prg_16_rom/prg_16_rom/prg_16_rom_in_context.xdc] for cell 'cart_blk/PRG_inst'
+Finished Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/prg_16_rom/prg_16_rom/prg_16_rom_in_context.xdc] for cell 'cart_blk/PRG_inst'
+Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/pll/pll/pll_in_context.xdc] for cell 'pll_i'
+Finished Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/pll/pll/pll_in_context.xdc] for cell 'pll_i'
+Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/vram/vram/vram_in_context.xdc] for cell 'vram_inst'
+Finished Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/vram/vram/vram_in_context.xdc] for cell 'vram_inst'
+Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/vram/vram/vram_in_context.xdc] for cell 'wram_inst'
+Finished Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/vram/vram/vram_in_context.xdc] for cell 'wram_inst'
+Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/multiplier/multiplier/multiplier_in_context.xdc] for cell 'rp2a03_blk/apu_inst/apu_mixer_inst/pulse_scaler'
+Finished Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/multiplier/multiplier/multiplier_in_context.xdc] for cell 'rp2a03_blk/apu_inst/apu_mixer_inst/pulse_scaler'
+Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/multiplier/multiplier/multiplier_in_context.xdc] for cell 'rp2a03_blk/apu_inst/apu_mixer_inst/traingle_scaler'
+Finished Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/multiplier/multiplier/multiplier_in_context.xdc] for cell 'rp2a03_blk/apu_inst/apu_mixer_inst/traingle_scaler'
+Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/multiplier/multiplier/multiplier_in_context.xdc] for cell 'rp2a03_blk/apu_inst/apu_mixer_inst/noise_scaler'
+Finished Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/multiplier/multiplier/multiplier_in_context.xdc] for cell 'rp2a03_blk/apu_inst/apu_mixer_inst/noise_scaler'
+Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/NEXYS_A7.xdc]
+Finished Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/NEXYS_A7.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/src/NEXYS_A7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/nes_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/nes_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2716.793 ; gain = 0.000 ; free physical = 1151 ; free virtual = 7204
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2716.793 ; gain = 0.000 ; free physical = 1151 ; free virtual = 7204
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 1223 ; free virtual = 7278
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 1223 ; free virtual = 7278
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  /home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/pll/pll/pll_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  /home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.gen/sources_1/ip/pll/pll/pll_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for cart_blk/CHR_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cart_blk/PRG_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for pll_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for vram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for wram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for rp2a03_blk/apu_inst/apu_mixer_inst/noise_scaler. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for rp2a03_blk/apu_inst/apu_mixer_inst/pulse_scaler. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for rp2a03_blk/apu_inst/apu_mixer_inst/traingle_scaler. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 1223 ; free virtual = 7278
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'rp2a03_dma'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 S_READY |                              000 |                              000
+              S_DMC_WAIT |                              001 |                              011
+              S_SPR_READ |                              010 |                              001
+             S_SPR_WRITE |                              011 |                              010
+              S_DMC_READ |                              100 |                              100
+          S_DMC_READ_INT |                              101 |                              101
+                  S_DONE |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'rp2a03_dma'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 1213 ; free virtual = 7269
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 3     
+	   2 Input   15 Bit       Adders := 3     
+	   3 Input   12 Bit       Adders := 2     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 3     
+	   2 Input   10 Bit       Adders := 3     
+	   2 Input    9 Bit       Adders := 2     
+	   4 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 26    
+	   3 Input    7 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 10    
+	   3 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 12    
+	   2 Input    3 Bit       Adders := 7     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
+	   2 Input      3 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 7     
++---Registers : 
+	               16 Bit    Registers := 25    
+	               15 Bit    Registers := 3     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	               11 Bit    Registers := 6     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 41    
+	                7 Bit    Registers := 6     
+	                6 Bit    Registers := 15    
+	                5 Bit    Registers := 10    
+	                4 Bit    Registers := 20    
+	                3 Bit    Registers := 10    
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 97    
++---RAMs : 
+	               2K Bit	(256 X 8 bit)          RAMs := 1     
+	              256 Bit	(32 X 8 bit)          RAMs := 1     
+	              192 Bit	(32 X 6 bit)          RAMs := 1     
++---Muxes : 
+	   4 Input   24 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 85    
+	   4 Input   16 Bit        Muxes := 2     
+	   7 Input   16 Bit        Muxes := 2     
+	   6 Input   16 Bit        Muxes := 1     
+	   9 Input   16 Bit        Muxes := 32    
+	   2 Input   15 Bit        Muxes := 9     
+	   4 Input   14 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 2     
+	   8 Input   14 Bit        Muxes := 1     
+	   9 Input   13 Bit        Muxes := 2     
+	   5 Input   13 Bit        Muxes := 1     
+	   4 Input   13 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 4     
+	   2 Input   11 Bit        Muxes := 8     
+	   4 Input    9 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 6     
+	   3 Input    9 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 9     
+	  16 Input    8 Bit        Muxes := 1     
+	   6 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 79    
+	   5 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 10    
+	  10 Input    8 Bit        Muxes := 4     
+	   9 Input    8 Bit        Muxes := 9     
+	   2 Input    7 Bit        Muxes := 3     
+	   4 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 16    
+	   9 Input    6 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 1     
+	  10 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 21    
+	   4 Input    5 Bit        Muxes := 1     
+	   9 Input    5 Bit        Muxes := 1     
+	   8 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 49    
+	  10 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 4     
+	   3 Input    4 Bit        Muxes := 2     
+	   5 Input    4 Bit        Muxes := 3     
+	   6 Input    4 Bit        Muxes := 3     
+	   8 Input    4 Bit        Muxes := 3     
+	   7 Input    4 Bit        Muxes := 2     
+	  14 Input    4 Bit        Muxes := 2     
+	   9 Input    4 Bit        Muxes := 2     
+	  11 Input    4 Bit        Muxes := 1     
+	  17 Input    3 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 21    
+	  14 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 2     
+	  16 Input    3 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 21    
+	   7 Input    2 Bit        Muxes := 8     
+	   6 Input    2 Bit        Muxes := 7     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 7     
+	  17 Input    2 Bit        Muxes := 4     
+	   8 Input    2 Bit        Muxes := 3     
+	   5 Input    2 Bit        Muxes := 1     
+	  11 Input    2 Bit        Muxes := 1     
+	  13 Input    2 Bit        Muxes := 1     
+	  14 Input    2 Bit        Muxes := 4     
+	  16 Input    2 Bit        Muxes := 1     
+	   9 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 360   
+	   8 Input    1 Bit        Muxes := 26    
+	   5 Input    1 Bit        Muxes := 23    
+	   6 Input    1 Bit        Muxes := 22    
+	   7 Input    1 Bit        Muxes := 22    
+	  14 Input    1 Bit        Muxes := 12    
+	   4 Input    1 Bit        Muxes := 47    
+	  17 Input    1 Bit        Muxes := 10    
+	   3 Input    1 Bit        Muxes := 5     
+	  12 Input    1 Bit        Muxes := 1     
+	   9 Input    1 Bit        Muxes := 30    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design nes_top has port aud_sd driven by constant 0
+WARNING: [Synth 8-7129] Port Mode[1] in module T65_ALU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mode[0] in module T65_ALU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P[5] in module T65_MCode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P[4] in module T65_MCode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P[3] in module T65_MCode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port P[2] in module T65_MCode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Abort_n in module T65 is either unconnected or has no load
+RAM Pipeline Warning: Read Address Register Found For RAM m_OAM_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM m_OAM_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM m_OAM_reg. We will not be able to pipeline it. This may degrade performance. 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 1158 ; free virtual = 7224
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|PPU_gen2    | rgb_reg    | 64x6          | LUT            | 
+|PPU_gen2    | rgb_reg    | 64x6          | LUT            | 
++------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|ppu_inst    | m_OAM_reg  | 256 x 8(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+-----------------+-----------+----------------------+-------------+
+|Module Name | RTL Object      | Inference | Size (Depth x Width) | Primitives  | 
++------------+-----------------+-----------+----------------------+-------------+
+|ppu_inst    | m_sec_OAM_reg   | Implied   | 32 x 8               | RAM32M x 2  | 
+|ppu_inst    | palette_ram_reg | Implied   | 32 x 6               | RAM32M x 1  | 
++------------+-----------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 1047 ; free virtual = 7113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 961 ; free virtual = 7027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|ppu_inst    | m_OAM_reg  | 256 x 8(WRITE_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++------------+-----------------+-----------+----------------------+-------------+
+|Module Name | RTL Object      | Inference | Size (Depth x Width) | Primitives  | 
++------------+-----------------+-----------+----------------------+-------------+
+|ppu_inst    | m_sec_OAM_reg   | Implied   | 32 x 8               | RAM32M x 2  | 
+|ppu_inst    | palette_ram_reg | Implied   | 32 x 6               | RAM32M x 1  | 
++------------+-----------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance ppu_inst/m_OAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 961 ; free virtual = 7027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 957 ; free virtual = 7023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 957 ; free virtual = 7023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 956 ; free virtual = 7022
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 956 ; free virtual = 7022
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 955 ; free virtual = 7022
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 955 ; free virtual = 7022
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|nes_top     | rp2a03_blk/apu_inst/apu_noise_inst/lfsr_reg[6] | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|nes_top     | rp2a03_blk/apu_inst/apu_noise_inst/lfsr_reg[1] | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------+------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |pll           |         1|
+|2     |vram          |         2|
+|3     |prg_16_rom    |         1|
+|4     |chr_8_rom     |         1|
+|5     |multiplier    |         3|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |chr_8_rom  |     1|
+|2     |multiplier |     3|
+|5     |pll        |     1|
+|6     |prg_16_rom |     1|
+|7     |vram       |     2|
+|9     |CARRY4     |    58|
+|10    |LUT1       |    45|
+|11    |LUT2       |   349|
+|12    |LUT3       |   238|
+|13    |LUT4       |   348|
+|14    |LUT5       |   441|
+|15    |LUT6       |   874|
+|16    |MUXF7      |    14|
+|17    |RAM32M     |     2|
+|18    |RAM32X1D   |     2|
+|19    |RAMB18E1   |     1|
+|20    |SRL16E     |     2|
+|21    |FDCE       |   730|
+|22    |FDPE       |    11|
+|23    |FDRE       |   533|
+|24    |FDSE       |     3|
+|25    |IBUF       |     7|
+|26    |OBUF       |    18|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 955 ; free virtual = 7022
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2716.793 ; gain = 0.000 ; free physical = 1005 ; free virtual = 7071
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 1005 ; free virtual = 7071
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2716.793 ; gain = 0.000 ; free physical = 1095 ; free virtual = 7162
+INFO: [Netlist 29-17] Analyzing 77 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2716.793 ; gain = 0.000 ; free physical = 1039 ; free virtual = 7106
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+
+Synth Design complete, checksum: 13cd9321
+INFO: [Common 17-83] Releasing license: Synthesis
+75 Infos, 39 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:49 . Memory (MB): peak = 2716.793 ; gain = 64.031 ; free physical = 1304 ; free virtual = 7370
+INFO: [Common 17-1381] The checkpoint '/home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/synth_1/nes_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file nes_top_utilization_synth.rpt -pb nes_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 11 22:13:16 2023...

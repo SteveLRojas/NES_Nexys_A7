@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Jul 11 22:13:21 2023
+# Process ID: 653688
+# Current directory: /home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/impl_1
+# Command line: vivado -log nes_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source nes_top.tcl -notrace
+# Log file: /home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/impl_1/nes_top.vdi
+# Journal file: /home/dragomir/repos/NES_Nexys_A7/Nexys_A7_NES/Nexys_A7_NES.runs/impl_1/vivado.jou
+# Running On: dragomir-System-Product-Name, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 16, Host memory: 16659 MB
+#-----------------------------------------------------------
+source nes_top.tcl -notrace

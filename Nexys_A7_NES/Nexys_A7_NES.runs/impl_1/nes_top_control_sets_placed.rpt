@@ -1,0 +1,209 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Tue Jul 11 22:13:51 2023
+| Host         : dragomir-System-Product-Name running 64-bit Linux Mint 21.1
+| Command      : report_control_sets -verbose -file nes_top_control_sets_placed.rpt
+| Design       : nes_top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   131 |
+|    Minimum number of control sets                        |   131 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   195 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   131 |
+| >= 0 to < 4        |     9 |
+| >= 4 to < 6        |    27 |
+| >= 6 to < 8        |     6 |
+| >= 8 to < 10       |    65 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     2 |
+| >= 16              |    16 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             107 |           38 |
+| No           | No                    | Yes                    |              96 |           48 |
+| No           | Yes                   | No                     |              58 |           27 |
+| Yes          | No                    | No                     |             157 |           59 |
+| Yes          | No                    | Yes                    |             647 |          233 |
+| Yes          | Yes                   | No                     |             220 |           74 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------+------------------+----------------+--------------+
+|    Clock Signal    |                                   Enable Signal                                  |                             Set/Reset Signal                             | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------+------------------+----------------+--------------+
+|  pll_i/inst/clk_25 | ppu_inst/spr_v_invert__0                                                         | button_debounce_i/AR[0]                                                  |                2 |              2 |         1.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_attribute[7][5]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                1 |              3 |         3.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_attribute[6][5]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                1 |              3 |         3.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_attribute[5][5]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                2 |              3 |         1.50 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_attribute[4][5]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                1 |              3 |         3.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_attribute[3][5]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                1 |              3 |         3.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_attribute[2][5]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                1 |              3 |         3.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_attribute[1][5]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                1 |              3 |         3.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_attribute[0][5]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                2 |              3 |         1.50 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/dmc_enable_reg[0]                                            | rp2a03_blk/cpu_inst/SR[0]                                                |                1 |              4 |         4.00 |
+|  pll_i/inst/clk_25 | ppu_inst/state[3]_i_1_n_0                                                        | button_debounce_i/AR[0]                                                  |                2 |              4 |         2.00 |
+|  pll_i/inst/clk_25 | button_debounce_i/button_count[1][3]_i_1_n_0                                     | button_debounce_i/AR[0]                                                  |                1 |              4 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_pulse_1_inst/envelope_generator_inst/divider             |                                                                          |                2 |              4 |         2.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_pulse_1_inst/envelope_generator_inst/count[3]_i_1_n_0    | button_debounce_i/rst_in0                                                |                1 |              4 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_noise_inst/timer_pulse                                   |                                                                          |                1 |              4 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_noise_inst/envelope_generator/divider                    |                                                                          |                2 |              4 |         2.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_noise_inst/envelope_generator/count[3]_i_1__1_n_0        | button_debounce_i/rst_in0                                                |                1 |              4 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_pulse_2_inst/envelope_generator_inst/count[3]_i_1__0_n_0 | button_debounce_i/rst_in0                                                |                1 |              4 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_pulse_2_inst/envelope_generator_inst/divider             |                                                                          |                2 |              4 |         2.00 |
+|  pll_i/inst/clk_25 | button_debounce_i/button_count[0][3]_i_1_n_0                                     | button_debounce_i/AR[0]                                                  |                1 |              4 |         4.00 |
+|  pll_i/inst/clk_25 | button_debounce_i/button_count                                                   | button_debounce_i/AR[0]                                                  |                1 |              4 |         4.00 |
+|  pll_i/inst/clk_25 | button_debounce_i/button_count[2][3]_i_1_n_0                                     | button_debounce_i/AR[0]                                                  |                1 |              4 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/write_status                                                 | button_debounce_i/rst_in0                                                |                1 |              4 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/dma_inst/dma_active_i_1_n_0                                           |                                                                          |                2 |              4 |         2.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_row[3]_i_1_n_0                                                      | button_debounce_i/AR[0]                                                  |                2 |              4 |         2.00 |
+|  pll_i/inst/clk_25 |                                                                                  | rp2a03_blk/apu_inst/apu_pulse_2_inst/length_counter_inst/length_reg[6]_1 |                1 |              4 |         4.00 |
+|  pll_i/inst/clk_25 |                                                                                  | rp2a03_blk/apu_inst/apu_noise_inst/length_counter_inst/length_reg[7]_0   |                1 |              4 |         4.00 |
+|  pll_i/inst/clk_25 |                                                                                  | rp2a03_blk/apu_inst/apu_pulse_1_inst/length_counter_inst/length_reg[6]_1 |                1 |              4 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/dma_inst/ri_byte_sel_reg[0]                                           | button_debounce_i/AR[0]                                                  |                3 |              5 |         1.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_triangle_inst/length_counter/E[0]                        | button_debounce_i/rst_in0                                                |                1 |              5 |         5.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/dma_inst/ri_background_select                                         | button_debounce_i/AR[0]                                                  |                3 |              5 |         1.67 |
+|  pll_i/inst/clk_25 | ppu_inst/h_tile                                                                  | button_debounce_i/AR[0]                                                  |                2 |              5 |         2.50 |
+|  pll_i/inst/clk_25 | rp2a03_blk/dma_inst/E[0]                                                         | button_debounce_i/AR[0]                                                  |                1 |              5 |         5.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/WRn_i_reg_5[0]                                               |                                                                          |                2 |              5 |         2.50 |
+|  pll_i/inst/clk_25 | rp2a03_blk/dma_inst/spr_address[15]_i_1_n_0                                      |                                                                          |                1 |              5 |         5.00 |
+|  pll_i/inst/clk_25 | ppu_inst/sec_OAM_address[4]_i_1_n_0                                              | button_debounce_i/AR[0]                                                  |                2 |              5 |         2.50 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/from_cpu_hold[4]_i_3_0[0]                                    | button_debounce_i/rst_in0                                                |                1 |              6 |         6.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/WRn_i_reg_6[0]                                               | button_debounce_i/rst_in0                                                |                3 |              6 |         2.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/dma_inst/ri_spr_enable                                                | button_debounce_i/AR[0]                                                  |                1 |              6 |         6.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_frame_counter_inst/E[0]                                  |                                                                          |                2 |              6 |         3.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/dmc_enable_reg[0]                                            | rp2a03_blk/dma_inst/dmc_ack_reg_1[0]                                     |                1 |              7 |         7.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_triangle_inst/linear_counter_val[6]_i_1_n_0              | button_debounce_i/rst_in0                                                |                3 |              7 |         2.33 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_high[5][15]_i_1_n_0                                           | button_debounce_i/AR[0]                                                  |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_high[2][15]_i_1_n_0                                           | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/BAL_reg[1]_4[0]                                              | button_debounce_i/rst_in0                                                |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_high[4][15]_i_1_n_0                                           | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_high[3][15]_i_1_n_0                                           | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/BAL_reg[1]_5[0]                                              | button_debounce_i/rst_in0                                                |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/from_cpu_hold[4]_i_2__1_0[0]                                 | button_debounce_i/rst_in0                                                |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_col[7][7]_i_1_n_0                                                   | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/E[0]                                                         | button_debounce_i/rst_in0                                                |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_pulse_1_inst/length_counter_inst/length[7]_i_2__2_n_0    | button_debounce_i/SR[0]                                                  |                4 |              8 |         2.00 |
+|  pll_i/inst/clk_25 | ppu_inst/v_fine                                                                  | button_debounce_i/AR[0]                                                  |                8 |              8 |         1.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_high[0][15]_i_1_n_0                                           | button_debounce_i/AR[0]                                                  |                4 |              8 |         2.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_high[1][15]_i_1_n_0                                           | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_noise_inst/length_counter_inst/length[7]_i_2_n_0         | button_debounce_i/noise_en_reg[0]                                        |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/dma_inst/spr_address[7]_i_1_n_0                                       |                                                                          |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_high[7][15]_i_1_n_0                                           | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/BAL[7]_i_1_n_0                                               | rp2a03_blk/cpu_inst/MCycle[2]_i_3_n_0                                    |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_col[1][7]_i_1_n_0                                                   | button_debounce_i/AR[0]                                                  |                4 |              8 |         2.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/dma_inst/spr_data[7]_i_1_n_0                                          |                                                                          |                4 |              8 |         2.00 |
+|  pll_i/inst/clk_25 | ppu_inst/ri_pram_wr                                                              |                                                                          |                1 |              8 |         8.00 |
+|  pll_i/inst/clk_25 | ppu_inst/OAM_address[7]_i_1_n_0                                                  | button_debounce_i/AR[0]                                                  |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[3][15]_i_1_n_0                                            | button_debounce_i/AR[0]                                                  |                4 |              8 |         2.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_vram_a[12]_i_1_n_0                                                  | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/BAL_reg[1]_7[0]                                              | button_debounce_i/rst_in0                                                |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[7][15]_i_1_n_0                                            | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/AD                                                           | rp2a03_blk/cpu_inst/MCycle[2]_i_3_n_0                                    |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/dmc_inst/shift_0                                             |                                                                          |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[4][15]_i_1_n_0                                            | button_debounce_i/AR[0]                                                  |                4 |              8 |         2.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[0][15]_i_1_n_0                                            | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/BusB[7]_i_5_0[0]                                             | button_debounce_i/rst_in0                                                |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_high[6][15]_i_1_n_0                                           | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/BAL_reg[1]_8[0]                                              | button_debounce_i/rst_in0                                                |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/BusB_r                                                       | rp2a03_blk/cpu_inst/MCycle[2]_i_3_n_0                                    |                5 |              8 |         1.60 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_col[3][7]_i_1_n_0                                                   | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[5][15]_i_1_n_0                                            | button_debounce_i/AR[0]                                                  |                4 |              8 |         2.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[2][15]_i_1_n_0                                            | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[1][15]_i_1_n_0                                            | button_debounce_i/AR[0]                                                  |                4 |              8 |         2.00 |
+|  pll_i/inst/clk_25 | ppu_inst/picture_address                                                         | button_debounce_i/AR[0]                                                  |                5 |              8 |         1.60 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/dmc_inst/timer[7]_i_1_n_0                                    |                                                                          |                4 |              8 |         2.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/PC[7]_i_1_n_0                                                | rp2a03_blk/cpu_inst/MCycle[2]_i_3_n_0                                    |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/PC[15]_i_1_n_0                                               | rp2a03_blk/cpu_inst/MCycle[2]_i_3_n_0                                    |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/WRn_i_reg_4[0]                                               |                                                                          |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/DL                                                           | rp2a03_blk/cpu_inst/MCycle[2]_i_3_n_0                                    |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/BAL_reg[1]_6                                                 | button_debounce_i/rst_in0                                                |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_col[4][7]_i_1_n_0                                                   | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/BAH[7]_i_1_n_0                                               | rp2a03_blk/cpu_inst/MCycle[2]_i_3_n_0                                    |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_col[6][7]_i_1_n_0                                                   | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/Y[7]_i_1_n_0                                                 |                                                                          |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/S[7]_i_1_n_0                                                 | rp2a03_blk/cpu_inst/MCycle[2]_i_3_n_0                                    |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_col[5][7]_i_1_n_0                                                   | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/ri_read_buf                                                             | button_debounce_i/AR[0]                                                  |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | ppu_inst/NES_row[7]_i_1_n_0                                                      | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/WRn_i_reg_3[0]                                               |                                                                          |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/p_2_out[4]                                                   |                                                                          |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/dma_inst/WRn_i_reg[0]                                                 | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/dma_inst/dmc_ack_reg_0[0]                                             |                                                                          |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/dma_inst/ri_prev_ncs_reg_0[0]                                         | button_debounce_i/AR[0]                                                  |                4 |              8 |         2.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_col[0][7]_i_1_n_0                                                   | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/p_1_out[4]                                                   |                                                                          |                4 |              8 |         2.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_triangle_inst/length_counter/length[7]_i_2__0_n_0        | button_debounce_i/triangle_en_reg[0]                                     |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_pulse_2_inst/length_counter_inst/length[7]_i_2__1_n_0    | button_debounce_i/pulse2_en_reg[0]                                       |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[6][15]_i_1_n_0                                            | button_debounce_i/AR[0]                                                  |                3 |              8 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/pattern_data0                                                           | button_debounce_i/AR[0]                                                  |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_col[2][7]_i_1_n_0                                                   | button_debounce_i/AR[0]                                                  |                4 |              8 |         2.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/Mode_r                                                       | rp2a03_blk/cpu_inst/MCycle[2]_i_3_n_0                                    |                2 |              8 |         4.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_frame_counter_inst/apu_clk                               | rp2a03_blk/apu_inst/apu_frame_counter_inst/apu_cycle_count[13]_i_1_n_0   |                5 |             10 |         2.00 |
+|  pll_i/inst/clk_25 | ppu_inst/vesa_line                                                               | button_debounce_i/AR[0]                                                  |                3 |             10 |         3.33 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_triangle_inst/E[0]                                       |                                                                          |                4 |             11 |         2.75 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_noise_inst/timer_pulse                                   | button_debounce_i/rst_in0                                                |                3 |             11 |         3.67 |
+|  pll_i/inst/clk_25 | ppu_inst/sec_OAM_write_reg_n_0                                                   |                                                                          |                2 |             12 |         6.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/PC_reg[15]_0[0]                                              | button_debounce_i/rst_in0                                                |                4 |             12 |         3.00 |
+|  pll_i/inst/clk_25 |                                                                                  | rp2a03_blk/cpu_inst/MCycle[2]_i_3_n_0                                    |               12 |             14 |         1.17 |
+|  pll_i/inst/clk_25 | ppu_inst/horiz_advance                                                           | button_debounce_i/AR[0]                                                  |                8 |             14 |         1.75 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[1][7]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                2 |             16 |         8.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[3][7]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                3 |             16 |         5.33 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[2][7]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                3 |             16 |         5.33 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[4][7]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                2 |             16 |         8.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[6][7]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                2 |             16 |         8.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[7][7]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                3 |             16 |         5.33 |
+|  pll_i/inst/clk_25 | rp2a03_blk/cpu_inst/dmc_enable_reg[0]                                            |                                                                          |                6 |             16 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[5][7]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                2 |             16 |         8.00 |
+|  pll_i/inst/clk_25 | ppu_inst/spr_shift_low[0][7]_i_1_n_0                                             | button_debounce_i/AR[0]                                                  |                2 |             16 |         8.00 |
+|  pll_i/inst/clk_25 | rp2a03_blk/dma_inst/a_out[15]_i_1_n_0                                            |                                                                          |                6 |             16 |         2.67 |
+|  pll_i/inst/clk_25 | rp2a03_blk/dma_inst/PBR                                                          | rp2a03_blk/cpu_inst/MCycle[2]_i_3_n_0                                    |               20 |             30 |         1.50 |
+|  pll_i/inst/clk_25 | rp2a03_blk/apu_inst/apu_frame_counter_inst/apu_clk                               | button_debounce_i/rst_in0                                                |               15 |             40 |         2.67 |
+|  pll_i/inst/clk_25 | ppu_inst/bg_shift1                                                               | button_debounce_i/AR[0]                                                  |               14 |             48 |         3.43 |
+|  pll_i/inst/clk_25 |                                                                                  | button_debounce_i/rst_in0                                                |               25 |             48 |         1.92 |
+|  pll_i/inst/clk_25 |                                                                                  | button_debounce_i/AR[0]                                                  |               35 |             80 |         2.29 |
+|  pll_i/inst/clk_25 |                                                                                  |                                                                          |               38 |            107 |         2.82 |
++--------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------+------------------+----------------+--------------+
+
+
