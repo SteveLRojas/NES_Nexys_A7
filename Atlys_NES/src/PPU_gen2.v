@@ -712,14 +712,17 @@ module PPU_gen2
     reg spr_h_invert;
     reg spr_primary_exists; //indicates that the first sprite found was the primary sprite
     reg sprite_overflow;
+    reg[1:0] spr_timer;
 
     wire[8:0] spr_y_compare;
     wire spr_in_range;
+    wire spr_timer_nz;
 
     //assign spr_y_compare = NES_row - OAM_q;
     assign spr_y_compare = NES_row + ~OAM_q + {7'h0, vert_scaler};
     assign sec_OAM_d = ((sec_OAM_address[1:0] == 2'b00) ? spr_y_compare[7:0] : OAM_q) | {8{~gate_sec_OAM}};  //hack to store relative Y position
     assign spr_in_range = (~|spr_y_compare[8:4]) & (~spr_y_compare[3] | ri_sprite_height);
+    assign spr_timer_nz = |spr_timer;
     assign sec_OAM_wren = sec_OAM_write;
     assign sec_OAM_a = sec_OAM_address[4:0];
     assign OAM_a = (vblank | ~ri_spr_enable) ? ri_oam_address : OAM_address;
@@ -780,11 +783,13 @@ module PPU_gen2
             spr_h_invert <= 1'b0;
             spr_primary_exists <= 1'b0;
             sprite_overflow <= 1'b0;
+            spr_timer <= 2'b00;
         end
         else
         begin
             if(active_rows && ~prev_active_rows)
                 sprite_overflow <= 1'b0;
+            
             if(active_render_area & (|NES_row[7:0]))
             begin
                 if(horiz_advance)
@@ -837,6 +842,10 @@ module PPU_gen2
                 spr_shift_high[6][7:0] <= 8'h00;
                 spr_shift_high[7][7:0] <= 8'h00;
             end
+            
+            if(spr_timer_nz)
+                spr_timer <= spr_timer - 2'b01;
+            
             //state machine logic
             case(state)
                 S_IDLE:
@@ -932,19 +941,23 @@ module PPU_gen2
                             if(ri_sprite_height)
                                 spr_vram_a[4] <= spr_v_invert ^ spr_row[3];
                             spr_vram_a[2:0] <= {3{spr_v_invert}} ^ spr_row[2:0];  //Y position above current line
-                            state <= S_FETCH_NOP;
+                            //state <= S_FETCH_NOP;
+                            state <= S_FETCH_PATTERN_LOW;
                         end
                     endcase
+                    spr_timer <= 2'h3;
+                    spr_vram_a[3] <= 1'b0;
                 end
-                S_FETCH_NOP:
+                /*S_FETCH_NOP:
                 begin
                     spr_vram_a[3] <= 1'b0;
                     if(horiz_advance)
                         state <= S_FETCH_PATTERN_LOW;
-                end
+                end*/
                 S_FETCH_PATTERN_LOW:
                 begin
-                    if(horiz_advance)
+                    //if(horiz_advance)
+                    if(~spr_timer_nz)
                     begin
                         spr_vram_a[3] <= 1'b1;
                         if(spr_h_invert)
@@ -960,13 +973,14 @@ module PPU_gen2
                             spr_shift_low[sec_OAM_address[4:2]][9] <= vram_d_in[6];
                             spr_shift_low[sec_OAM_address[4:2]][8] <= vram_d_in[7];
                         end
-                        //spr_shift_low[sec_OAM_address[4:2]][15:8] <= spr_h_invert ? vram_d_in[7:0] : vram_d_in[0:7];
+                        spr_timer <= 2'h3;
                         state <= S_FETCH_PATTERN_HIGH;
                     end
                 end
                 S_FETCH_PATTERN_HIGH:
                 begin
-                    if(horiz_advance)
+                    //if(horiz_advance)
+                    if(~spr_timer_nz)
                     begin
                         sec_OAM_address <= sec_OAM_address + 5'h01;
                         if(spr_h_invert)
@@ -982,7 +996,6 @@ module PPU_gen2
                             spr_shift_high[sec_OAM_address[4:2]][9] <= vram_d_in[6];
                             spr_shift_high[sec_OAM_address[4:2]][8] <= vram_d_in[7];
                         end
-                        //spr_shift_high[sec_OAM_address[4:2]][15:8] <= spr_h_invert ? vram_d_in[7:0] : vram_d_in[0:7];
                         if(&sec_OAM_address[4:2])
                             state <= S_IDLE;
                         else

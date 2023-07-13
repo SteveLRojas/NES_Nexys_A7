@@ -24,8 +24,8 @@ assign chr_d_out = chrrom_pat_bram_dout & {8{ciram_nce_out}};
 assign ciram_nce_out = ~chr_a_in[13];
 assign ciram_a10_out = chr_a_in[11];	//A10 for vertical mirroring, A11 for horizontal
 
-//PRG_32_ROM PRG_inst(.clka(clk_in), .addra(prg_a_in), .douta(prgrom_bram_dout));
-prg_16_rom PRG_inst(.clka(clk_in), .addra(prg_a_in[13:0]), .douta(prgrom_bram_dout));
+prg_32_rom PRG_inst(.clka(clk_in), .addra(prg_a_in), .douta(prgrom_bram_dout));
+//prg_16_rom PRG_inst(.clka(clk_in), .addra(prg_a_in[13:0]), .douta(prgrom_bram_dout));
 
 chr_8_rom CHR_inst(.clka(clk_in), .addra(chr_a_in[12:0]), .douta(chrrom_pat_bram_dout));
 
