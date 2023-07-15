@@ -1,7 +1,7 @@
 module nes_top(
 		input  wire clk,		// 50MHz system clock signal
 		input  wire rst_n,			// reset push button (active low)
-		input wire[4:0] button,
+		input wire[3:0] button,
 		output wire[3:0] led,
 		//Joypad
 		input wire jp_data1,
@@ -27,7 +27,7 @@ module nes_top(
 	wire clk_25;
 	wire clk_250;
 	wire rst;
-	wire[4:0] button_d;
+	wire[3:0] button_d;
 	wire jp_latch;
 	wire jp_data_clean[1:0];
 
@@ -62,7 +62,7 @@ module nes_top(
 	button_debounce
 	#(
 		.INVERT_BUTTONS(1'b0),
-		.NUM_BUTTONS(5),
+		.NUM_BUTTONS(4),
 		.CLK_DIV_BITS(15)
 	)
 	button_debounce_i
@@ -86,7 +86,6 @@ module nes_top(
 	wire rp2a03_r_nw;
 	wire cpu_reset;
 	
-	assign cpu_reset = button_d[4];
 	assign led[3] = ~cpu_reset;
 
 	rp2a03 rp2a03_blk(
@@ -190,8 +189,10 @@ module nes_top(
 	
 	assign cart_prg_nce = ~rp2a03_a[15];
 
-	cart cart_blk(
-		.clk_in(clk_25),
+	cart_03 cart_blk(
+		.clk_sys(clk_25),
+		.rst(rst),
+		.rst_out(cpu_reset),
 		// PRG ROM interface:
 		.prg_nce_in(cart_prg_nce),
 		.prg_a_in(rp2a03_a[14:0]),
