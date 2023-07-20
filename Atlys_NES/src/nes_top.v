@@ -1,7 +1,7 @@
 module nes_top(
 		input  wire clk,		// 50MHz system clock signal
 		input  wire rst_n,			// reset push button (active low)
-		input wire[3:0] button,
+		input wire[4:0] button,
 		output wire[7:0] led,
 		//Joypad
 		input wire jp_data1,
@@ -27,7 +27,7 @@ module nes_top(
 	wire clk_25;
 	wire clk_250;
 	wire rst;
-	wire[3:0] button_d;
+	wire[4:0] button_d;
 	wire jp_latch;
 	wire jp_data_clean[1:0];
 
@@ -62,7 +62,7 @@ module nes_top(
 	button_debounce
 	#(
 		.INVERT_BUTTONS(1'b0),
-		.NUM_BUTTONS(4),
+		.NUM_BUTTONS(5),
 		.CLK_DIV_BITS(15)
 	)
 	button_debounce_i
@@ -73,6 +73,14 @@ module nes_top(
 		.rst_out(rst),
 		.button_out(button_d)
 	);
+//#############################################################################
+
+//#############################################################################
+	wire[35:0] control;
+	wire[15:0] ila_data;
+	wire[5:0] ila_trig;
+	icon icon_i(.CONTROL0(control));
+	ila ila_i(.CONTROL(control), .CLK(clk_25), .DATA(ila_data), .TRIG0(ila_trig));
 //#############################################################################
 
 //#############################################################################
@@ -133,10 +141,14 @@ module nes_top(
 	assign ppu_ri_sel = rp2a03_a[2:0];
 	assign ppu_ri_ncs = ~(rp2a03_a[15:13] == 3'b001);
 	assign ppu_ri_r_nw = rp2a03_r_nw;
+	
+	//assign ila_trig = {vsync, hsync};
 
 	PPU_gen2 ppu_inst(
 		 .debug_in(~{button_d[3], button_d[2]}),
 		 .debug_out(led[2:0]),
+		 .debug_ila(ila_data),
+		 .debug_trig(ila_trig),
 		 .clk_in(clk_25),
 		 .rst_in(rst),
 		 .ri_sel_in(ppu_ri_sel),
@@ -216,7 +228,7 @@ module nes_top(
 //
 	wire[10:0] vram_a;
 	wire[7:0] vram_dout;
-	assign vram_a = {cart_ciram_a10, ppu_vram_a[9:0]};
+	assign vram_a = {cart_ciram_a10 ^ button_d[4], ppu_vram_a[9:0]};
 
 	vram vram_inst(
 		.clka(clk_25),

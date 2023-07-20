@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=Z:\Atlys_NES\nes_top.ncd
-OUTFILE=Z:\Atlys_NES\nes_top.bit
+INFILE=/home/dragomir/repos/NES_Nexys_A7/Atlys_NES/nes_top.ncd
+OUTFILE=/home/dragomir/repos/NES_Nexys_A7/Atlys_NES/nes_top.bit
 FAMILY=Spartan6
 PART=xc6slx45-3csg324
-WORKINGDIR=Z:\Atlys_NES
+WORKINGDIR=/home/dragomir/repos/NES_Nexys_A7/Atlys_NES
 LICENSE=WebPack
-USER_INFO=__0_0_0
+USER_INFO=211593295_0_0_651

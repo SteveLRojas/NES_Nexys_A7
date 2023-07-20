@@ -38,7 +38,9 @@ module PPU_gen2
     input wire[7:0] ri_d_in,		// register interface data in
     input wire[7:0] vram_d_in,		// video memory data bus (input)
     output wire[2:0] debug_out,
-	output reg vde,
+	output wire[15:0] debug_ila,
+	output wire[5:0] debug_trig,
+    output reg vde,
     output reg hsync_out,			// vga hsync signal
     output reg vsync_out,			// vga vsync signal
     output wire[1:0] r_out,         // vga red signal
@@ -84,13 +86,12 @@ module PPU_gen2
     reg ri_pram_wr; //write enable for palette ram
 
     wire horiz_advance;
+	wire last_scanline;
     wire vblank;    //active high vblank driven by VGA timing logic
     wire ri_spr0_hit;
     wire ri_spr_overflow;
     wire[7:0] ri_oam_q;
     wire[7:0] ri_pram_q;
-
-    assign debug_out = {ri_spr0_hit, ri_spr_enable, ri_bg_enable};
 
     always @(posedge clk_in or posedge rst_in)
     begin
@@ -151,6 +152,19 @@ module PPU_gen2
             ri_address_inc <= next_ri_address_inc;
         end
     end
+	
+	//debug
+	reg ppustatus_r;
+	reg ppudata_r;
+	reg ppuctrl_w;
+	reg ppumask_w;
+	reg ppuscroll_w;
+	reg ppuaddr_w;
+	reg ppudata_w;
+	reg ppu_access;
+	wire[7:0] ri_debug;
+	
+	assign ri_debug = {ppustatus_r, ppudata_r, ppuctrl_w, ppumask_w, ppuscroll_w, ppuaddr_w, ppudata_w, ppu_access};
 
     always @(*)
     begin
@@ -184,6 +198,16 @@ module PPU_gen2
         next_ri_address_update = 1'b0;
 
         next_ri_read_buf = (ri_read_buf_update) ? vram_d_in : ri_read_buf;
+		
+		//debug
+		ppustatus_r = 1'b0;
+		ppudata_r = 1'b0;
+		ppuctrl_w = 1'b0;
+		ppumask_w = 1'b0;
+		ppuscroll_w = 1'b0;
+		ppuaddr_w = 1'b0;
+		ppudata_w = 1'b0;
+		ppu_access = ~ri_ncs_in;
 
         // Set the vblank status bit on a rising vblank edge.  Clear it if vblank is false.  Can also be cleared by reading 0x2002.
         if(~ri_prev_vblank & vblank)
@@ -206,6 +230,7 @@ module PPU_gen2
                         next_ri_cpu_data_out = {ri_vblank, ri_spr0_hit, ri_spr_overflow, 5'b00000};
                         next_ri_byte_sel = 1'b0;
                         next_ri_vblank = 1'b0;
+						ppustatus_r = 1'b1;
                     end
                     3'h4:  // 0x2004 OAMDATA
                     begin
@@ -216,6 +241,7 @@ module PPU_gen2
                         next_ri_cpu_data_out  = (vram_a_out[13:8] == 6'h3F) ? ri_pram_q : ri_read_buf;
                         next_ri_read_buf_update = 1'b1;
                         next_ri_address_inc = 1'b1;
+						ppudata_r = 1'b1;
                     end
                     default: ;
                 endcase
@@ -224,7 +250,7 @@ module PPU_gen2
             begin
                 // External register write.
                 case (ri_sel_in)
-                    3'h0:  // 0x2000
+                    3'h0:  // 0x2000 PPUCTRL
                     begin
                         next_ri_nmi_enable = ri_d_in[7];
                         next_ri_sprite_height = ri_d_in[5];
@@ -233,25 +259,27 @@ module PPU_gen2
                         next_ri_inc_sel  = ri_d_in[2];
                         next_ri_v_name = ri_d_in[1];
                         next_ri_h_name = ri_d_in[0];
+						ppuctrl_w = 1'b1;
                     end
-                    3'h1:  // 0x2001
+                    3'h1:  // 0x2001 PPUMASK
                     begin
                         next_ri_spr_enable = ri_d_in[4];
                         next_ri_bg_enable = ri_d_in[3];
                         next_ri_spr_clip_enable = ~ri_d_in[2];
                         next_ri_bg_clip_enable = ~ri_d_in[1];
+						ppumask_w = 1'b1;
                     end
-                    3'h3:  // 0x2003
+                    3'h3:  // 0x2003 OAMADDR
                     begin
                         next_ri_oam_address = ri_d_in;
                     end
-                    3'h4:  // 0x2004
+                    3'h4:  // 0x2004 OAMDATA
                     begin
                         ri_oam_d = ri_d_in;
                         ri_oam_wr = 1'b1;
                         next_ri_oam_address = ri_oam_address + 8'h01;
                     end
-                    3'h5:  // 0x2005
+                    3'h5:  // 0x2005 PPUSCROLL
                     begin
                         next_ri_byte_sel = ~ri_byte_sel;
                         if (~ri_byte_sel)
@@ -266,8 +294,9 @@ module PPU_gen2
                             next_ri_v_fine = ri_d_in[2:0];
                             next_ri_v_tile = ri_d_in[7:3];
                         end
+						ppuscroll_w = 1'b1;
                     end
-                    3'h6:  // 0x2006
+                    3'h6:  // 0x2006 PPUADDR
                     begin
                         next_ri_byte_sel = ~ri_byte_sel;
                         if (~ri_byte_sel)
@@ -285,8 +314,9 @@ module PPU_gen2
                             next_ri_h_tile = ri_d_in[4:0];
                             next_ri_address_update = 1'b1;
                         end
+						ppuaddr_w = 1'b1;
                     end
-                    3'h7:  // 0x2007
+                    3'h7:  // 0x2007 PPUDATA
                     begin
                         if (vram_a_out[13:8] == 6'h3F)
                             ri_pram_wr = 1'b1;
@@ -294,6 +324,7 @@ module PPU_gen2
                             vram_wr_out = 1'b1;
                         vram_d_out = ri_d_in;
                         next_ri_address_inc = 1'b1;
+						ppudata_w = 1'b1;
                     end
                     default: ;
                 endcase
@@ -377,6 +408,7 @@ module PPU_gen2
 
     // virtual advance logic
     assign horiz_advance = (horiz_scaler == 3'b000) | (horiz_scaler == 3'b010);
+	assign last_scanline = vesa_line[9] & vesa_line[3] & (vesa_line[2] | (&vesa_line[1:0])); //vesa_line is 523 or 524
 
     assign vblank = ~(active_rows | active_draw_area);   //need to check active area because active rows goes low at the start of the last active row
     assign nvbl_out = ~(ri_vblank & ri_nmi_enable);
@@ -483,6 +515,12 @@ module PPU_gen2
     reg update_h_count; //high to update h counters from ri
     reg inc_v_count;    //high to increment v counters to next line
     reg inc_h_count;    //high to increment h counters to next pixel
+	// Note that update takes priority over inc.
+	
+	assign debug_out = {ri_spr0_hit, ri_spr_enable, ri_bg_enable};
+	//assign debug_ila = {ri_debug, ri_v_tile, ri_v_fine};
+	assign debug_ila = {ri_debug, ri_vblank, ri_spr0_hit, ri_spr_overflow, ri_v_tile};
+	assign debug_trig = {vesa_line[0], horiz_advance, update_v_count, inc_v_count, active_rows, active_render_area};
 
     //compute next counter values
     always @(*)
@@ -516,16 +554,19 @@ module PPU_gen2
                     {next_v_tile, next_v_fine} = {v_tile, v_fine} + 8'h01;
                 end
             end
+			
             if(inc_h_count)
             begin
                 {next_h_name, next_h_tile} = {h_name, h_tile} + 6'h01;
             end
+			
             if(update_v_count || ri_address_update)
             begin
                 next_v_name  = ri_v_name;
                 next_v_tile = ri_v_tile;
                 next_v_fine = ri_v_fine;
             end
+			
             if(update_h_count || ri_address_update)
             begin
                 next_h_name  = ri_h_name;
@@ -565,9 +606,9 @@ module PPU_gen2
 
                 if(vert_scaler)    //changing to new row
                 begin
-                    if(NES_row == 8'd239)  //finishing last row
-                        update_v_count = 1'b1;
-                    else
+                    //if(NES_row == 8'd239)  //finishing last row
+                    //    update_v_count = 1'b1;
+                    //else
                         inc_v_count = 1'b1;
                 end
             end
@@ -1111,7 +1152,8 @@ module PPU_gen2
             spr0_hit <= 1'b0;
         else
         begin
-            if(active_rows & ~prev_active_rows)
+            //if(active_rows & ~prev_active_rows)
+			if(last_scanline)
                 spr0_hit <= 1'b0;
             else if(spr_primary && !spr_trans && !bg_trans)
                 spr0_hit <= 1'b1;
